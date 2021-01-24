@@ -18,3 +18,4 @@ Tips
 `pio run -t upload` - upload firmware to a target  
 `pio run -t clean` - clean project (remove compiled files)  
 `pio run -t upload -e uno` upload only for arduino uno  
+`pio platform update --dry-run’ check for updates  
