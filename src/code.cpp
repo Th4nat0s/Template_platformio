@@ -14,6 +14,10 @@ void setup()
 
 void loop()
 {
+  // If debug version 
+  #ifdef __PLATFORMIO_BUILD_DEBUG__
+  Serial.println("Start sketch");
+  #endif
   // turn the LED on (HIGH is the voltage level)
   digitalWrite(LED_BUILTIN, HIGH);
   // wait for a second
