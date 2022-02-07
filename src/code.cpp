@@ -6,6 +6,10 @@
 
 #include <Arduino.h>
 
+#ifndef LED_BUILTIN
+  const int LED_BUILTIN = 8;
+#endif
+
 void setup()
 {
   // initialize LED digital pin as an output.
