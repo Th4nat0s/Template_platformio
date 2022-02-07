@@ -6,8 +6,10 @@
 
 #include <Arduino.h>
 
-#ifndef LED_BUILTIN
-  const int LED_BUILTIN = 8;
+#ifdef ARDUINO_AVR_PROMICRO8
+  const int LED_CUSTOM = 30;
+#else
+  const int LED_CUSTOM = LED_BUILTIN;
 #endif
 
 void setup()
@@ -23,11 +25,11 @@ void loop()
   Serial.println("Start sketch");
   #endif
   // turn the LED on (HIGH is the voltage level)
-  digitalWrite(LED_BUILTIN, HIGH);
+  digitalWrite(LED_CUSTOM, HIGH);
   // wait for a second
   delay(500);
   // turn the LED off by making the voltage LOW
-  digitalWrite(LED_BUILTIN, LOW);
+  digitalWrite(LED_CUSTOM, LOW);
    // wait for a second
   delay(500);
 }
