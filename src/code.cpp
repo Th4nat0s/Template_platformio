@@ -6,6 +6,10 @@
 
 #include <Arduino.h>
 
+#ifdef ARDUINO_AVR_MICRODUINO_CORE_USB
+  const int LED_BUILTIN = 30;
+#endif
+
 #ifdef ARDUINO_AVR_PROMICRO8
   const int LED_CUSTOM = 30;
 #else
@@ -27,9 +31,9 @@ void loop()
   // turn the LED on (HIGH is the voltage level)
   digitalWrite(LED_CUSTOM, HIGH);
   // wait for a second
-  delay(500);
+  delay(50);
   // turn the LED off by making the voltage LOW
   digitalWrite(LED_CUSTOM, LOW);
    // wait for a second
-  delay(500);
+  delay(50);
 }
